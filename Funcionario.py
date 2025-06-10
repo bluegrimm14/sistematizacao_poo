@@ -7,11 +7,11 @@ class Funcionario(Pessoa):
     def add_quarto(self,  hotel, quarto):
         pass
 
-    def remover_quarto(hotel, quarto):
+    def remover_quarto(self, hotel, quarto):
         pass
 
-    def registrar_hospede(hotel, hospede):
+    def registrar_hospede(self, hotel, hospede):
         pass
 
-    def cancelar_reserva(hotel, reserva):
+    def cancelar_reserva(self, hotel, reserva):
         pass

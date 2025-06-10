@@ -5,11 +5,14 @@ class Hospede(Pessoa):
         super().__init__(id, nome, email)
         self._reservas = reservas
 
-        def fazer_reserva(reserva):
+        def get_reservas(self):
+            return self._reservas  
+
+        def fazer_reserva(self, reserva):
             pass
 
-        def cancelar_reserva(reserva):
+        def cancelar_reserva(self, reserva):
             pass
 
-        def consultar_reservas():
+        def consultar_reservas(self):
             pass
