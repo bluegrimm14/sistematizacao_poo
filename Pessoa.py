@@ -16,3 +16,6 @@ class Pessoa:
     @property
     def email(self) -> str:
         return self._email
+    
+    def __str__(self) -> str:
+        return f"Id:{self.id} - Nome:{self.nome} - E-mail:{self.email}"

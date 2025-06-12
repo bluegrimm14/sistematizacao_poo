@@ -1,9 +1,9 @@
 from Pessoa import Pessoa
-from Reserva import Reserva
+# from Reserva import Reserva
 
 class Hospede(Pessoa):
-    def __init__(self, nome: str, email: str, reservas: list[Reserva]):
-        super().__init__(id, nome, email)
+    def __init__(self, nome: str, email: str, reservas: list):
+        super().__init__(nome, email)
         self._reservas = reservas
 
         def get_reservas(self):
