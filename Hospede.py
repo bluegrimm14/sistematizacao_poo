@@ -2,7 +2,7 @@ from Pessoa import Pessoa
 from Reserva import Reserva
 
 class Hospede(Pessoa):
-    def __init__(self: str, id, nome: str, email: str, reservas: list[Reserva]): #pendente colocar na futura documentação - list[Reserva]
+    def __init__(self, nome: str, email: str, reservas: list[Reserva]):
         super().__init__(id, nome, email)
         self._reservas = reservas
 

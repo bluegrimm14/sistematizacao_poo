@@ -1,14 +1,18 @@
+import uuid
 class Pessoa:
-    def __init__(self, id: str, nome: str, email: str):
-        self._id = id
+    def __init__(self, nome: str, email: str):
+        self._id = str(uuid.uuid4())
         self._nome = nome
         self._email = email
 
-    def get_id(self) -> str:
+    @property
+    def id(self) -> str:
         return self._id
     
-    def get_nome(self) -> str:
+    @property
+    def nome(self) -> str:
         return self._nome
     
-    def get_email(self) -> str:
+    @property
+    def email(self) -> str:
         return self._email

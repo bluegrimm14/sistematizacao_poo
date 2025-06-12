@@ -1,7 +1,7 @@
 from Pessoa import Pessoa
 
 class Funcionario(Pessoa):
-    def __init__(self, id: str, nome: str, email: str):
+    def __init__(self, nome: str, email: str):
         super().__init__(id, nome, email)
     
     def add_quarto(self,  hotel, quarto):
