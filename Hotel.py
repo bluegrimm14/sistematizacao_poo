@@ -9,14 +9,18 @@ class Hotel:
         self._hospedes: list[Hospede] = []
         self._reservas: list[Reserva] = []
 
-    def get_quartos(self):
+    @property
+    def quartos(self):
         return self._quartos
     
-    def get_hospedes(self):
+    @property
+    def hospedes(self):
         return self._hospedes
     
-    def get_reservas(self):
+    @property
+    def reservas(self):
         return self._reservas
     
-    def set_reserva(self, reserva: Reserva):
+    @property
+    def reserva(self, reserva: Reserva):
         self._reservas.append[reserva]

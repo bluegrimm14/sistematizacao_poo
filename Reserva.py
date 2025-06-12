@@ -6,8 +6,10 @@ class Reserva:
         self._hospede = hospede
         self._quarto = quarto
 
-    def get_hospede(self):
+    @property
+    def hospede(self):
         return self._hospede
     
-    def get_quarto(self):
+    @property
+    def quarto(self):
         return self._quarto

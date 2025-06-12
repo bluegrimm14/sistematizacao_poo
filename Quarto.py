@@ -4,13 +4,16 @@ class Quarto:
         self._tipo = tipo
         self._disponivel = disponivel
 
-    def get_numero(self):
+    @property
+    def numero(self):
         return self._numero
     
-    def get_tipo(self):
+    @property
+    def tipo(self):
         return self._tipo
     
-    def get_disponivel(self):
+    @property
+    def disponivel(self):
         return self._disponivel
     
     def reservar():
