@@ -37,4 +37,5 @@ class Hotel:
 
     def cancelar_reserva(self, reserva: Reserva):
         if reserva in self._reservas:
+            reserva.quarto.liberar()
             self._reservas.remove(reserva)
