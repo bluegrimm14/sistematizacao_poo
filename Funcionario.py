@@ -19,5 +19,8 @@ class Funcionario(Pessoa):
     def registrar_hospede(self, hotel: Hotel, hospede: "Hospede"):
         hotel.registrar_hospede(hospede)
 
-    def cancelar_reserva(self, hotel: Hotel, reserva: Reserva):
+    def cancelar_reserva(self, hotel: Hotel, reserva: "Reserva"):
         hotel.cancelar_reserva(reserva)
+
+    def registrar_reserva(self, hotel: Hotel, reserva: "Reserva"):
+        hotel.add_reserva(reserva)

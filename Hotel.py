@@ -20,9 +20,8 @@ class Hotel:
     def reservas(self) -> list[Reserva]:
         return self._reservas
     
-    @reservas.setter
-    def reservas(self, reserva: Reserva):
-        self._reservas.append[reserva]
+    def add_reserva(self, reserva: Reserva):
+        self._reservas.append(reserva)
 
     def  add_quarto(self, quarto: Quarto):
         self._quartos.append(quarto)
