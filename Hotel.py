@@ -21,11 +21,12 @@ class Hotel:
         return self._reservas
     
     def add_reserva(self, reserva: Reserva):
+        reserva.quarto.reservar()
         self._reservas.append(reserva)
 
     def  add_quarto(self, quarto: Quarto):
         self._quartos.append(quarto)
-        print("Quarto adicionado com Sucesso!")
+        print(f"Quarto {quarto.numero} adicionado com Sucesso!")
 
     def remover_quarto(self, quarto: Quarto):
         if quarto in self._quartos:

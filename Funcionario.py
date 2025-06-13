@@ -24,3 +24,6 @@ class Funcionario(Pessoa):
 
     def registrar_reserva(self, hotel: Hotel, reserva: "Reserva"):
         hotel.add_reserva(reserva)
+
+    def ver_disponibilidade(self, quarto: Quarto):
+        print(f"O quarto {quarto.numero} está {quarto.esta_disponivel()}.\n")

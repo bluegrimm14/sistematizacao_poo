@@ -19,12 +19,15 @@ class Quarto:
     def disponivel(self) -> bool:
         return self._disponivel
     
-    def reservar():
-        pass
+    def reservar(self):
+        self._disponivel = False
 
-    def liberar():
-        pass
+    def liberar(self):
+        self._disponivel = True 
 
-    def esta_disponivel():
-        pass
+    def esta_disponivel(self) -> str:
+        if self._disponivel == True:
+            return "Disponível"
+        else:
+            return "Indisponível"
     

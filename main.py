@@ -17,25 +17,29 @@ quarto_3 = Quarto(3, "Cuple", True)
 
 
 # Registro de reserva
-print("Registro de Reservas\n", "-"*20)
+print("\nRegistro de Reservas\n", "-"*20)
 func_1.add_quarto(hotel, quarto_1)
 func_1.add_quarto(hotel, quarto_2)
 func_1.add_quarto(hotel, quarto_3)
-print(hotel.quartos)
+
 
 func_1.registrar_hospede(hotel, hospede=hosp_1)
 print(hotel.hospedes)
 
+func_1.ver_disponibilidade(quarto_1)
+
 reserva = Reserva(hosp_1, quarto_1)
+hosp_1.fazer_reserva(reserva)
 func_1.registrar_reserva(hotel, reserva)
-print(hotel.reservas[0])
+# print(hotel.reservas[0])
+func_1.ver_disponibilidade(quarto_1)
 
 # Consultas de Reservas
-print("Registro de Reservas\n", "-"*20)
+print("\nRegistro de Reservas\n", "-"*20)
 
 
 # Cancelamento de Reservas
-print("Registro de Reservas\n", "-"*20)
+print("\nRegistro de Reservas\n", "-"*20)
 
 
 

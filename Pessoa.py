@@ -6,7 +6,7 @@ class Pessoa:
         self._email = email
 
     def __str__(self) -> str:
-        return f"Id:{self.id} - Nome:{self.nome} - E-mail:{self.email}"
+        return f"Id:{self.id}\nNome:{self.nome}\nE-mail:{self.email}"
     
     @property
     def id(self) -> str:
