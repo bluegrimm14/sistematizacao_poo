@@ -4,7 +4,6 @@ from Quarto import Quarto
 from Hotel import Hotel
 from Reserva import Reserva
 
-
 # Intanciação das classes.
 print("Instanciando os objetos\n", "-"*20)
 hotel = Hotel()
@@ -13,8 +12,6 @@ hosp_1 = Hospede("Millena", "millena@millena.com")
 quarto_1 = Quarto(1, "Single", True)
 quarto_2 = Quarto(2, "Two Single", True)
 quarto_3 = Quarto(3, "Cuple", True)
-
-
 
 # Registro de reserva
 print("\nRegistro de Reservas\n", "-"*20)
@@ -31,7 +28,7 @@ func_1.ver_disponibilidade(quarto_1)
 reserva = Reserva(hosp_1, quarto_1)
 hosp_1.fazer_reserva(reserva)
 func_1.registrar_reserva(hotel, reserva)
-# print(hotel.reservas[0])
+print(hotel.reservas[0])
 func_1.ver_disponibilidade(quarto_1)
 
 # Consultas de Reservas

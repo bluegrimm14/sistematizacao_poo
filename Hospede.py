@@ -6,6 +6,10 @@ class Hospede(Pessoa):
         super().__init__(nome, email)
         self._reservas: list = []
 
+    def __str__(self):
+        return f"Nome: {self._nome}\nE-mail: {self._email}\nQtd. Reservas: \
+        {len(self._reservas)}"
+
     @property
     def reservas(self) -> list:
         return self._reservas  

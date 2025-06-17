@@ -9,6 +9,9 @@ from Hospede import Hospede
 class Funcionario(Pessoa):
     def __init__(self, nome: str, email: str):
         super().__init__(nome, email)
+
+    def __str__(self):
+        return f"Nome: {self._nome}\nE-mail: {self._email}"
     
     def add_quarto(self,  hotel: Hotel, quarto: Quarto):
         hotel.add_quarto(quarto)
