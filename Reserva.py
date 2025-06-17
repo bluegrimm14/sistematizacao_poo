@@ -7,8 +7,8 @@ class Reserva:
         self._hospede = hospede
         self._quarto = quarto
 
-    # def __str__(self):
-    #     return f"Hospede: {self._hospede} \nQuarto: {self._quarto}"
+    def __str__(self):
+        return f"Hospede: {self._hospede.nome} \nQuarto: {self._quarto.numero}"
 
     @property
     def hospede(self) -> "Hospede":
