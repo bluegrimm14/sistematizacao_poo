@@ -13,7 +13,7 @@ class Quarto:
             tipo(str): Tipo do Quarto
             disponivel(bool): DIsponibilidade do Quarto. True == Disponível e False == Indisponível."""
         self._numero = numero
-        self._tipo = tipo
+        self._tipo = self.valida_tipo(tipo)
         self._disponivel = disponivel
 
     def __str__(self) -> str:
@@ -23,6 +23,15 @@ class Quarto:
     def __repr__(self):
         """Representação oficial, normalmente em coleções do python, do objeto Quarto."""
         return f"Número: {self._numero} - Tipo: {self._tipo} - Disponibilidade: {self._disponivel}"
+
+    @staticmethod
+    def valida_tipo(tipo: str) -> str:
+        tipos = ["single", "two single", "cuple"]
+        if tipo.lower() in tipos:
+            return tipo
+        else:
+            raise ValueError("Tipo inválido. Os Tipos de quarto disponíveis são: Single, Two Single e Cuple.")
+
 
     @property
     def numero(self) -> int:

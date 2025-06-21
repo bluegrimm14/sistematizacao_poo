@@ -15,7 +15,7 @@ class Reserva:
             hospede(Hospede): Hospede da reserva.
             quarto(Quarto): Quarto hospedado da reserva."""
         self._hospede = hospede
-        self._quarto = quarto
+        self._quarto = self.valida_quarto(quarto)
 
     def __str__(self):
         """Representação em String do objeto Reserva."""
@@ -24,6 +24,13 @@ class Reserva:
     def __repr__(self):
         """Representação oficial, normalmente em coleções do python, do objeto Reserva."""
         return f"Hospede: {self._hospede.nome} - Quarto: {self._quarto.numero}"
+
+    @staticmethod
+    def valida_quarto(quarto: Quarto):
+        if quarto.disponivel == True:
+            return quarto
+        else:
+            raise ValueError ("Este Quarto se Encontra Indisponível!")
 
     @property
     def hospede(self) -> "Hospede":
