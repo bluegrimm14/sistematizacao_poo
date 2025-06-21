@@ -3,12 +3,11 @@ from Hospede import Hospede
 from Quarto import Quarto
 from Hotel import Hotel
 from Reserva import Reserva
-from Pessoa import Pessoa
 
 # Intanciação das classes.
 hotel = Hotel()
-func_1 = Funcionario("fulano", "fulano@fulano.com")
-hosp_1 = Hospede("ciclano", "ciclano@ciclano.com")
+func_1 = Funcionario("Fulano", "fulano@fulano.com")
+hosp_1 = Hospede("Ciclano", "ciclano@ciclano.com")
 quarto_1 = Quarto(1, "Single", True)
 quarto_2 = Quarto(2, "Two Single", True)
 quarto_3 = Quarto(3, "Cuple", True)
