@@ -7,8 +7,8 @@ from Pessoa import Pessoa
 
 # Intanciação das classes.
 hotel = Hotel()
-func_1 = Funcionario("Terry", "terry@terry.com")
-hosp_1 = Hospede("Millena", "millena@millena.com")
+func_1 = Funcionario("fulano", "fulano@fulano.com")
+hosp_1 = Hospede("ciclano", "ciclano@ciclano.com")
 quarto_1 = Quarto(1, "Single", True)
 quarto_2 = Quarto(2, "Two Single", True)
 quarto_3 = Quarto(3, "Cuple", True)
