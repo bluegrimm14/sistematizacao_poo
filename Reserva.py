@@ -19,7 +19,11 @@ class Reserva:
 
     def __str__(self):
         """Representação em String do objeto Reserva."""
-        return f"Hospede: {self._hospede.nome} \nQuarto: {self._quarto.numero}"
+        return f"Hospede: {self._hospede.nome}\nQuarto: {self._quarto.numero}"
+    
+    def __repr__(self):
+        """Representação oficial, normalmente em coleções do python, do objeto Reserva."""
+        return f"Hospede: {self._hospede.nome} - Quarto: {self._quarto.numero}"
 
     @property
     def hospede(self) -> "Hospede":

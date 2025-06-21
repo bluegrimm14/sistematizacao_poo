@@ -20,8 +20,11 @@ class Hospede(Pessoa):
 
     def __str__(self):
         """Representação em String do objeto Hóspede"""
-        return f"Nome: {self._nome}\nE-mail: {self._email}\nQtd. Reservas: \
-        {len(self._reservas)}"
+        return f"Nome: {self._nome}\nE-mail: {self._email}\nQtd. Reservas: {len(self._reservas)}"
+    
+    def __repr__(self):
+        """Representação oficial, normalmente em coleções do python, do objeto Hóspede."""
+        return f"Nome: {self._nome} - E-mail: {self._email} - Qtd. Reservas: {len(self._reservas)}"
 
     @property
     def reservas(self) -> list:

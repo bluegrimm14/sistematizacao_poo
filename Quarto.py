@@ -18,7 +18,11 @@ class Quarto:
 
     def __str__(self) -> str:
         """Representação em String do objeto Quarto."""
-        return f"{self._numero} - {self._tipo} - {self._disponivel}"
+        return f"Número: {self._numero}\nTipo: {self._tipo}\nDisponibilidade: {self._disponivel}"
+    
+    def __repr__(self):
+        """Representação oficial, normalmente em coleções do python, do objeto Quarto."""
+        return f"Número: {self._numero} - Tipo: {self._tipo} - Disponibilidade: {self._disponivel}"
 
     @property
     def numero(self) -> int:

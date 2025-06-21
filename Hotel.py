@@ -57,6 +57,7 @@ class Hotel:
             quarto(Quarto): Quarto a ser removido."""
         if quarto in self._quartos:
             self.quartos.remove(quarto)
+            print("Quarto Removido com Sucesso.")
         else:
             print("Este quarto não existe no Hotel.")
 
@@ -69,12 +70,14 @@ class Hotel:
         print(f"O(A) Hóspede {hospede.nome} foi Registrado com Sucesso.")
 
     def cancelar_reserva(self, reserva: Reserva):
-        """Método que cancela uma reserva no Hotel.
+        """Método que cancela uma reserva no Hotel. Ao cancelar uma reserva, está é excluida da lista de reservas do hotel, o quarto da reserva fica disponível e o hóspede dessa reserva é excluido da lista de hóspedes.
         
         Args:
             reserva(Reserva): Reserva a ser cancelada."""
         if reserva in self._reservas:
             reserva.quarto.liberar()
+            self._hospedes.remove(reserva.hospede)
             self._reservas.remove(reserva)
+            print(f"Reserva, e Respectivo Hóspede, Removidos com Sucesso.")
         else:
             print("Esta reserva não existe no Hotel.")
