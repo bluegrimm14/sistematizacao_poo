@@ -29,7 +29,7 @@ hosp_1.fazer_reserva(reserva)
 func_1.registrar_reserva(hotel, reserva)
 func_1.ver_disponibilidade(quarto_1)
 
-# Consultas de Reservas
+# Consultas de Quartos, Hóspedes e Reservas
 print("\nRegistro de Reservas\n", "-"*20)
 
 

@@ -23,19 +23,25 @@ class Hotel:
     def add_reserva(self, reserva: Reserva):
         reserva.quarto.reservar()
         self._reservas.append(reserva)
+        print("Reserva adicionada com Sucesso.")
 
     def  add_quarto(self, quarto: Quarto):
         self._quartos.append(quarto)
-        print(f"Quarto {quarto.numero} adicionado com Sucesso!")
+        print(f"O Quarto {quarto.numero} foi adicionado com Sucesso.")
 
     def remover_quarto(self, quarto: Quarto):
         if quarto in self._quartos:
             self.quartos.remove(quarto)
+        else:
+            print("Este quarto não existe no Hotel.")
 
     def registrar_hospede(self, hospede: Hospede):
         self._hospedes.append(hospede)
+        print(f"O(A) Hóspede {hospede.nome} foi Registrado com Sucesso.")
 
     def cancelar_reserva(self, reserva: Reserva):
         if reserva in self._reservas:
             reserva.quarto.liberar()
             self._reservas.remove(reserva)
+        else:
+            print("Esta reserva não existe no Hotel.")
